@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 * {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body {
@@ -7,6 +10,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: "Nunito Sans", sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
     font-weight: bold;
     color: #fff;
     background: #222222;
@@ -65,20 +69,23 @@ li {
 /* header style start */
 
 .header-fixed {
+    height: 70px;
     position: fixed;
-    top: -65px;
+    top: -70px;
     width: 100%;
     max-width: 100vw;
     background-color: #3a3a3a;
     border-bottom: 2px solid #222222;
     /* transition: all cubic-bezier(0, -0.02, 0, 0.84) 0.3s; */
-    transition: all ease .3s;
+    transition: top ease .3s;
+    z-index: 9999;
 }
 
 .header {
     position: absolute;
     width: 100%;
     max-width: 100vw;
+    height: 70px;
 }
 
 .class {
@@ -89,6 +96,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
 }
 
 .brand {
@@ -96,9 +104,9 @@ li {
     align-items: center;
 }
 
-.brand-logo {
+.brand img{
     height: 55px;
-    padding: 5px 0;
+    
 }
 
 .brand-logo-title {
@@ -151,7 +159,8 @@ li {
 }
 
 .inf-titles {
-    width: 42%;
+    position: relative;
+    max-width: 485px;
 }
 
 .inf-title {
@@ -161,9 +170,14 @@ li {
 
 .inf-subtitle {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 18px;
     color: #b8b8b8;
-    padding-bottom: 84px;
+}
+
+.inf-links {
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
 }
 
 .inf-link {
@@ -172,6 +186,10 @@ li {
     padding: 10px 32px;
     border-radius: 2.5px;
     transition: all 0.3s ease;
+}
+
+.inf-link:last-child{
+    margin-left: 20px;
 }
 
 .inf-link:hover {
@@ -212,12 +230,12 @@ li {
 
 .menu-vid div {
     width: 31%;
-    height: 200px;
-    background-color: #fff;
-    border-radius: 3.5px;
     margin-bottom: 109px;
 }
 
+.menu-vid div iframe {
+    border-radius: 3.5px;
+}
 
 /* main-videos styles end */
 
